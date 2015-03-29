@@ -12,24 +12,29 @@
 	type="text/css">
 <style type="text/css">
 #maket {
-    width: 100%;
-   }
-   TD {
-    vertical-align: top;
-    padding: 5px;
-   }
-   TD#leftcol {
-    width: 200px;
-    background: #ccc;
-    border: 1px solid #000;
-   }
-   TD#rightcol {
-    background: #fc3;
-    border: 1px solid #000;
-   }
-   #spacer {
-    width: 10px;
-   }
+	width: 100%;
+}
+
+TD {
+	vertical-align: top;
+	padding: 5px;
+}
+
+TD#leftcol {
+	width: 200px;
+	background: #ccc;
+	border: 1px solid #000;
+}
+
+TD#rightcol {
+	background: #fc3;
+	border: 1px solid #000;
+}
+
+#spacer {
+	width: 10px;
+}
+
 .filelist {
 	float: left;
 	width: 250px;
@@ -68,18 +73,20 @@
 <body>
 	<center>
 		<div class="upload">
-			<h1><a href="">AIXM Project</a></h1>
+			<h1>
+				<a href="">AIXM Project</a>
+			</h1>
 			<form method="post" action="upload" enctype="multipart/form-data">
-				Select file to upload: <input type="file" name="file" size="60" /><br />
-				<br /> <input type="submit" value="Davai" />
+				Select file to upload: <input type="file" name="file" size="60" />
+				</br> <input type="submit" value="Davai" />
 			</form>
 		</div>
 		<table id="maket">
-		<tr>
-		<td id="leftcol">
-		
-		<div class="filelist">
-			<%
+			<tr>
+				<td id="leftcol">
+
+					<div class="filelist">
+						<%
 				out.println("Uploaded files:</br></br>");			
 				if (request.getAttribute("uploadedFiles") != null) {
 					ArrayList itemsArray = (ArrayList) request
@@ -92,11 +99,11 @@
 				}
 			%>
 
-		</div></td>
-    	<td id="spacer"></td>
-    	<td id="rightcol">
-    	<div id="map" class="map"></div>
-		<script type="text/javascript">
+					</div>
+				</td>
+				<td id="spacer"></td>
+				<td id="rightcol">
+					<div id="map" class="map"></div> <script type="text/javascript">
 			var map = new ol.Map({
 				target : 'map',
 				layers : [ new ol.layer.Tile({
@@ -110,11 +117,12 @@
 					zoom : 4
 				})
 			});
-		</script></td>
-		
-		
-		
-		</tr>
+		</script>
+				</td>
+
+
+
+			</tr>
 		</table>
 	</center>
 </body>
