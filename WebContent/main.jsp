@@ -68,7 +68,7 @@
 <body>
 	<center>
 		<div class="upload">
-			<h1>File Upload</h1>
+			<h1><a href="">AIXM Project</a></h1>
 			<form method="post" action="upload" enctype="multipart/form-data">
 				Select file to upload: <input type="file" name="file" size="60" /><br />
 				<br /> <input type="submit" value="Davai" />
@@ -77,13 +77,15 @@
 		<table id="maket">
 		<tr>
 		<td id="leftcol">
+		
 		<div class="filelist">
 			<%
+				out.println("Uploaded files:</br></br>");			
 				if (request.getAttribute("uploadedFiles") != null) {
 					ArrayList itemsArray = (ArrayList) request
 							.getAttribute("uploadedFiles");
 					for (int i = 0; i < itemsArray.size(); i++) {
-						out.println("<a href=\""+itemsArray.get(i)+"\">"+itemsArray.get(i)+"</url></br>");						
+						out.println("<a href=\"display?file="+itemsArray.get(i)+"\">"+itemsArray.get(i)+"</url></br>");						
 					}
 				} else {
 					out.println("no files uploaded yet");
