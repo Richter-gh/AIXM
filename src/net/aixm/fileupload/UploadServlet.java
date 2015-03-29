@@ -41,6 +41,8 @@ public class UploadServlet extends HttpServlet {
         // gets absolute path of the web application
     	if(ServletFileUpload.isMultipartContent(request)){
             try {
+            	System.out.println("uploadservlet");
+            	
                 List<FileItem> multiparts = new ServletFileUpload(
                                          new DiskFileItemFactory()).parseRequest(request);
                 
