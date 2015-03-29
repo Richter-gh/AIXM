@@ -1,0 +1,5 @@
+1. add aixm class structure
+2. start parsing files on upload
+3. remove uploads after parsing
+4. file links should maybe do post requests?
+5. something else
